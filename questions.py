@@ -14,20 +14,18 @@ any results.
 
 `OUT_OF_SCOPE` holds five questions your documents clearly don't cover. You
 need these in Milestone 4 to find where your relevance cutoff belongs, and
-again in week 2, where `run_eval.py` runs them through the gate and writes what
-happened into your run log — that's the evidence for criterion 3.
+again in week 2, where `run_eval.py` runs them through the gate and writes what happened into your run log — that's the evidence for criterion 3.
 
 Swap them for your own if you like. Keep five of them either way: criterion 3
 names a target of "4 of 5", and four of three is not a thing.
 """
 
 QUESTIONS = [
-    # {"question": "...", "expects": "..."},
-    {"question": "", "expects": ""},
-    {"question": "", "expects": ""},
-    {"question": "", "expects": ""},
-    {"question": "", "expects": ""},
-    {"question": "", "expects": ""},
+    {"question": "What do students say about wait times at Kestrel Commons during lunch?", "expects": "20"},
+    {"question": "Are CS 210 exams based on the textbook or the lecture material?", "expects": "lecture"},
+    {"question": "Are quiet floors enforced in Aldridge Hall?", "expects": "enforced"},
+    {"question": "Is the housing lottery for rising sophomores random?", "expects": "random"},
+    {"question": "What's the CS 210 final exam weighting relative to labs?", "expects": "10%"},
 ]
 
 # Questions from a different world entirely. Your gate should refuse all five.

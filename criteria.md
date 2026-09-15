@@ -62,6 +62,8 @@ in at least 4 of 5 tries.
      How would you know if your chunks were the right size? Name something
      countable or observable.
 
+indexing the campus_life corpus turned 88 documents into 88 chunks, meaning the 800-character window almost never split anything, since the posts are short. Fragmentation looks unlikely. The real risk is the opposite: a single post covering two unrelated details ending up in one chunk that half-matches several different questions. 4 of 5 leaves room for one such case without treating it as a full failure.
+
      Examples of the right shape — don't copy these, they should come from
      what you actually saw in Milestone 3:
        - "At least 4 of 5 sampled chunks read as a complete thought, with no
@@ -72,26 +74,16 @@ in at least 4 of 5 tries.
 
 
 **Why this target:**
-
+indexing the campus_life corpus turned 88 documents into 88 chunks, meaning the 800-character window almost never split anything, since the posts are short. Fragmentation looks unlikely. The real risk is the opposite: a single post covering two unrelated details ending up in one chunk that half-matches several different questions. 4 of 5 leaves room for one such case without treating it as a full failure.
 
 
 ---
 
 ## 5. Your choice
 
-<!-- YOU WRITE THIS ONE TOO.
-
-     Pick something you actually care about getting right. It could be about
-     speed, about refusals, about a particular kind of question your corpus
-     handles badly, about source attribution being correct rather than merely
-     present — anything, as long as it names a number or an observable
-     outcome. -->
-
-
-
+For at least 4 of my 5 test questions, the system returns an answer in under 5 seconds (not counting the one-time embedding model load).
 **Why this target:**
-
-
+slow answers are the thing I'd actually be annoyed by if this were a real tool I used day to day. 5 seconds is loose enough to allow for a normal model API round trip, but tight enough that if retrieval or the gate were doing something wasteful, it would show up in this number.
 
 ---
 
