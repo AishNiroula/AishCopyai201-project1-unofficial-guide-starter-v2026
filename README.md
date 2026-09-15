@@ -22,11 +22,7 @@
 
 ## What This Does
 
-<!-- Three or four sentences. Which corpus you picked, and the kinds of
-     questions your system answers. Write it for someone who has never seen
-     this repo.
-
-     Milestone 5. -->
+This is a retrieval-augmented question answering system for the campus_life corpus: 88 short, student-written posts about admin policies, courses, dining halls, housing, and campus life logistics. It answers specific factual questions like wait times at dining halls, whether exam material comes from lectures or textbooks, or how the housing lottery works, always citing the source document it drew from. Questions outside the corpus, like general trivia or medical advice, are refused rather than answered with guessed information.
 
 ## Chunking Strategy
 
@@ -148,9 +144,9 @@ I ran my five real questions and the five OUT_OF_SCOPE questions and recorded th
 
      Milestone 5. -->
 
-**1.**
+**1.** I used Claude to help debug my terminal setup, including fixing a broken GEMINI_API_KEY (I initially pasted in the wrong kind of key) and recovering from a corrupted edit to chunker.py after a heredoc paste failed and left the file in a broken state. Claude walked me through checking git status to confirm nothing was actually lost, then helped me rewrite the file cleanly.
 
-**2.**
+**2.** I asked Claude to help me decide whether campus_life needed a custom chunker at all. It suggested checking the wc -l line counts across all documents to see if any covered multiple unrelated topics; when even the longest documents turned out to be single-topic, we confirmed whole-document chunking was the right call instead of writing a more complex splitter.
 
 <!-- ── Stretch features ─────────────────────────────────────────────────────
      Doing one? Say so here BEFORE you start. A feature this README never
