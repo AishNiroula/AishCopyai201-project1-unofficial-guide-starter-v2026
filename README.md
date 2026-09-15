@@ -110,27 +110,32 @@ Laundry costs $1.75 wash, $1.75 dry, app-based. On noise: moderate; the building
 <!-- One complete question and answer, pasted as text, with the source line
      visible. Milestone 4. -->
 
-**Question:**
+**Question:** What do students say about wait times at Kestrel Commons during lunch?
 
 **Answer:**
 
 ```
+Based on the documents, students state that wait times at Kestrel Commons are 20 to 25 minutes between 12:15 and 1:00, and under 5 minutes before 11:45.
+
+Source: dining_kestrel_commons.txt (and dining_kestrel_commons_followup.txt)
 ```
 
-**My relevance cutoff:**
+**My relevance cutoff:** 0.55 (changed from the starter default of 0.6)
 
-<!-- The number you set in config.py, and how you got there.
-
-     You ran five questions your corpus covers and the five in OUT_OF_SCOPE
-     that it clearly doesn't, and wrote down the best distance for each. What
-     did those two groups look like? Where was the gap? Put the actual numbers
-     here — the table below wants all ten rows.
-
-     Milestone 4. -->
+I ran my five real questions and the five OUT_OF_SCOPE questions and recorded the best distance for each. The in-corpus questions topped out at 0.382, and the out-of-scope questions bottomed out at 0.825, leaving a wide gap between 0.38 and 0.82. The default of 0.6 already sat inside that gap, but closer to the out-of-scope side, so I moved it to 0.55 to sit closer to the middle, giving more margin against wrongly refusing a real question without meaningfully risking an answer to a nonsense one.
 
 | Question | In corpus? | Best distance |
 |---|---|---|
-|  |  |  |
+| What do students say about wait times at Kestrel Commons during lunch? | Yes | 0.259 |
+| Are CS 210 exams based on the textbook or the lecture material? | Yes | 0.382 |
+| Are quiet floors enforced in Aldridge Hall? | Yes | 0.274 |
+| Is the housing lottery for rising sophomores random? | Yes | 0.121 |
+| What's the CS 210 final exam weighting relative to labs? | Yes | 0.319 |
+| What is the capital of Mongolia? | No | 0.825 |
+| How do I change the oil in a diesel engine? | No | 0.934 |
+| Who won the 1994 World Cup? | No | 0.886 |
+| What is the recommended dosage of ibuprofen for a headache? | No | 0.844 |
+| How do I write a for loop in Rust? | No | 0.896 |
 
 ## How I Used AI
 
